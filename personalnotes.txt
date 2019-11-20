@@ -1,0 +1,62 @@
+
+HOW TO DO THE RSID STUFF
+
+
+61466@LAPTOP-FEQRQOI0 MINGW64 ~
+$ cd desktop
+
+61466@LAPTOP-FEQRQOI0 MINGW64 ~/desktop
+$ cd NodeJSCourse
+
+61466@LAPTOP-FEQRQOI0 MINGW64 ~/desktop/NodeJSCourse
+$ cd web-server
+
+61466@LAPTOP-FEQRQOI0 MINGW64 ~/desktop/NodeJSCourse/web-server (master)
+$ ls -a -l ~/.ssh
+ls: cannot access '/c/Users/61466/.ssh': No such file or directory
+
+61466@LAPTOP-FEQRQOI0 MINGW64 ~/desktop/NodeJSCourse/web-server (master)
+$ ssh-keygen -t rsa -b 4096 -C "c3046763@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/61466/.ssh/id_rsa):
+Created directory '/c/Users/61466/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/61466/.ssh/id_rsa.
+Your public key has been saved in /c/Users/61466/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:4lICyqnswYx3mwfytAOSfJa20njAxXq40tt6o7Jwyto c3046763@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|                 |
+|                 |
+|  o              |
+|...+             |
+|+++ o o S        |
+|O*o*o+ .         |
+|+B%=+o.          |
+|*Oo**+.          |
+|*=E=++           |
++----[SHA256]-----+
+
+61466@LAPTOP-FEQRQOI0 MINGW64 ~/desktop/NodeJSCourse/web-server (master)
+$ ls -a -l ~/.ssh
+total 16
+drwxr-xr-x 1 61466 197609    0 Nov 20 19:26 ./
+drwxr-xr-x 1 61466 197609    0 Nov 20 19:25 ../
+-rw-r--r-- 1 61466 197609 3381 Nov 20 19:26 id_rsa
+-rw-r--r-- 1 61466 197609  744 Nov 20 19:26 id_rsa.pub
+
+61466@LAPTOP-FEQRQOI0 MINGW64 ~/desktop/NodeJSCourse/web-server (master)
+$ eval $(ssh-agent -s)
+Agent pid 83
+
+61466@LAPTOP-FEQRQOI0 MINGW64 ~/desktop/NodeJSCourse/web-server (master)
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/61466/.ssh/id_rsa (c3046763@gmail.com)
+
+61466@LAPTOP-FEQRQOI0 MINGW64 ~/desktop/NodeJSCourse/web-server (master)
+$ ^C
+
+61466@LAPTOP-FEQRQOI0 MINGW64 ~/desktop/NodeJSCourse/web-server (master)
+$
