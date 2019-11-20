@@ -20,7 +20,7 @@ const forecast = (lattitude, longitude, callBack) => {
                 callBack('cant find this penis, check your lat and long', undefined)
             }
             else{
-                const data = 'todays weather is '+ body.daily.data[0].summary + ' It is currently '+body.currently.temperature+' degrees outside, there is a '+body.currently.precipProbability+'% chance of rain'
+                const data = 'todays weather is '+ body.daily.data[0].summary + ' It is currently '+body.currently.temperature+' degrees outside, there is a '+body.currently.precipProbability+'% chance of rain.'+'\n Tommorow\'s weather will be '+body.daily.data[1].summary+'\n Overall you can expect '+body.daily.summary
                 callBack(undefined, data)
             }        
         })
