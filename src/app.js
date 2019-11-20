@@ -6,6 +6,10 @@ const forecast = require('./utils/forecast')
 
 const app = express()
 
+//Here we are using the port value which herku has provided at process.env or if it doesn't exist then default to 3000
+const port = process.env.PORT || 3000
+
+
 //defining the paths for express config. You don't have to do this, it will default to a folder named 'views' in public (or whatever your top folder is)
 //with path.join, you can use '..' as a string to go up a folder from that path, or '../..' to go up 2 folders.
 //in this one we go up one then into public from there
@@ -108,6 +112,6 @@ app.get('*',(req,res)=>{
 
 
 //starting the server up, usually you use port 80 but we are using 3000 for no reason
-app.listen(3000, ()=>{
-    console.log('server started on port 3000')
+app.listen(port, ()=>{
+    console.log('server started on whatever port heroku provided or the default ('+port+')')
 })

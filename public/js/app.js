@@ -20,7 +20,8 @@ weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault()
     const location = search.value
     //making the url pass with the argument encoded as URI so it is proper (he doesn't do this in the course but I think it would be right)
-    const urlAddress = 'http://localhost:3000/weather?address='+encodeURIComponent(location)
+    //have removed localhost in front of /weather so it can adapt to the wurl in heroku when it it deployed
+    const urlAddress = '/weather?address='+encodeURIComponent(location)
     //This dude is going just above fetch to let the person know that the data is coming
     messageOne.textContent = 'Finding your weather ya mug'
     messageTwo.textContent = ''

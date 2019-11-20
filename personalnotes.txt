@@ -60,3 +60,36 @@ $ ^C
 
 61466@LAPTOP-FEQRQOI0 MINGW64 ~/desktop/NodeJSCourse/web-server (master)
 $
+
+
+
+
+
+******AND THEN ONCE YOU HAVE ENABLED THE SSH IN YOUR GIT AND SET UP A REPOSITORY YOU DO THIS TOO
+
+61466@LAPTOP-FEQRQOI0 MINGW64 ~/desktop/NodeJSCourse/web-server (master)
+$ ls -a -l ~/.ssh
+total 16
+drwxr-xr-x 1 61466 197609    0 Nov 20 19:26 ./
+drwxr-xr-x 1 61466 197609    0 Nov 20 19:25 ../
+-rw-r--r-- 1 61466 197609 3381 Nov 20 19:26 id_rsa
+-rw-r--r-- 1 61466 197609  744 Nov 20 19:26 id_rsa.pub
+
+61466@LAPTOP-FEQRQOI0 MINGW64 ~/desktop/NodeJSCourse/web-server (master)
+$ eval $(ssh-agent -s)
+Agent pid 83
+
+61466@LAPTOP-FEQRQOI0 MINGW64 ~/desktop/NodeJSCourse/web-server (master)
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/61466/.ssh/id_rsa (c3046763@gmail.com)
+
+61466@LAPTOP-FEQRQOI0 MINGW64 ~/desktop/NodeJSCourse/web-server (master)
+$ ^C
+
+61466@LAPTOP-FEQRQOI0 MINGW64 ~/desktop/NodeJSCourse/web-server (master)
+$ ssh -T git@github.com
+The authenticity of host 'github.com (13.237.44.5)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,13.237.44.5' (RSA) to the list of known hosts.
+Hi Scrappychin! You've successfully authenticated, but GitHub does not provide shell access.
