@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>SCROTUM</title>
+    <link rel="icon" href="/img/oldMan.jpg">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!--you can't put the script up the top cos it needs to load after the form has loaded. Put the scripts at the bottom-->
+</head>
+
+<body>
+    <div class="mainContent">
+        {{>header}}
+        <p>This site is to get your weather apparently</p>
+
+        <form>
+            <input placeholder="location">
+            <button>Get my weather</button>
+
+        </form>
+
+        <!--Thing to accept the location and forecast-->
+        <p id="messagePoops"></p>
+        <p id="messageScrotum"></p>
+    </div>
+
+    {{>footer}}
+
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
